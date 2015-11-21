@@ -5,10 +5,10 @@
 Почему в отрасли так много самозванцев? Потому, что запуск программы не требует никаких ресурсов. Сырья, сложных механизмов, нет необратимых процессов.
 Ты можешь запускать программу 5, 10, 200 раз и ничего не изменится в окружающем мире.
 
-Поэтому если твоя программа запускается сложно/долго - ты НЕ профессионал (лох). Ты сам лишаешь себя _базового_ преимущества программирования.
+Поэтому если твоя программа запускается сложно/долго - ты НЕ профессионал (лох). Ты сам лишаешь себя *_базового_* преимущества программирования.
 Ты и есть самозванец в отрасли.
 Ну и цитатка:
-[quote, Abraham Lincoln, Address delivered at the dedication of the Cemetery at Gettysburg]
+[quote, Robert C.Martin, The Clean Coder]
 ____
-asf
+The fact that some programmers do wait for builds is tragic and indicative of carelessness. In today's world build times should be measured in seconds, not minutes, and certainly not hours
 ____
