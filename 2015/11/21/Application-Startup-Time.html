@@ -1,32 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Application Startup Time - Practical Programming Answers</title>
-
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <meta name="description" content="">
-
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Application Startup Time">
-    <meta name="twitter:description" content="">
-
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Application Startup Time">
-    <meta property="og:description" content="">
-
-    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
-
-    <link rel="stylesheet" type="text/css" href="//azubkov.github.io/themes/uno/assets/css/uno.css?v=1.0.0" />
-
+    <title>Application Startup Time</title>
+    <meta name="description" content="" />
+    <link href="//fonts.googleapis.com/css?family=Noto+Sans:300,400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="//azubkov.github.io/themes/Saga/assets/css/style.css?v=1.0.0" rel="stylesheet" type="text/css">
+    <link href="//azubkov.github.io/themes/Saga/assets/css/animate.min.css?v=1.0.0" rel="stylesheet" type="text/css">
+    <link href="//azubkov.github.io/themes/Saga/favicon.ico" rel="shortcut icon">
     <link rel="canonical" href="https://azubkov.github.io/2015/11/21/Application-Startup-Time.html" />
     
     <meta property="og:site_name" content="Practical Programming Answers" />
@@ -35,7 +22,7 @@
     <meta property="og:description" content="Почему в отрасли так много самозванцев? Потому, что запуск программы не требует никаких ресурсов. Сырья, сложных механизмов, нет необратимых процессов. Ты можешь запускать программу 5, 10, 200 раз и ничего не изменится в окружающем мире. Поэтому если твоя программа запускается..." />
     <meta property="og:url" content="https://azubkov.github.io/2015/11/21/Application-Startup-Time.html" />
     <meta property="article:published_time" content="2015-11-20T23:00:00.000Z" />
-    <meta property="article:modified_time" content="2015-11-21T14:33:37.199Z" />
+    <meta property="article:modified_time" content="2015-11-21T14:35:46.543Z" />
     <meta property="article:tag" content="Local Run" />
     <meta property="article:tag" content="Build" />
     <meta property="article:tag" content="main()" />
@@ -61,7 +48,7 @@
     "headline": "Application Startup Time",
     "url": "https://azubkov.github.io/2015/11/21/Application-Startup-Time.html",
     "datePublished": "2015-11-20T23:00:00.000Z",
-    "dateModified": "2015-11-21T14:33:37.199Z",
+    "dateModified": "2015-11-21T14:35:46.543Z",
     "keywords": "Local Run,  Build,  main(),  Environment",
     "description": "Почему в отрасли так много самозванцев? Потому, что запуск программы не требует никаких ресурсов. Сырья, сложных механизмов, нет необратимых процессов. Ты можешь запускать программу 5, 10, 200 раз и ничего не изменится в окружающем мире. Поэтому если твоя программа запускается..."
 }
@@ -70,109 +57,33 @@
     <meta name="generator" content="Ghost ?" />
     <link rel="alternate" type="application/rss+xml" title="Practical Programming Answers" href="https://azubkov.github.io/rss" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
-
 </head>
-<body class="post-template tag-Local-Run tag-Build tag-main tag-Environment no-js">
-
-    <span class="mobile btn-mobile-menu">
-        <i class="icon icon-list btn-mobile-menu__icon"></i>
-        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
-    </span>
-
-    <header class="panel-cover panel-cover--collapsed " style="background-image: url(https://raw.githubusercontent.com/azubkov/azubkov.github.io/master/images/bg.png)">
-      <div class="panel-main">
-    
-        <div class="panel-main__inner panel-inverted">
-        <div class="panel-main__content">
-    
-            <a href="https://azubkov.github.io" title="link to homepage for Practical Programming Answers"><img src="https://raw.githubusercontent.com/azubkov/azubkov.github.io/master/images/myLogo.png" width="80" alt="Practical Programming Answers logo" class="panel-cover__logo logo" /></a>
-            <h1 class="panel-cover__title panel-title"><a href="https://azubkov.github.io" title="link to homepage for Practical Programming Answers">Practical Programming Answers</a></h1>
-            <hr class="panel-cover__divider" />
-            <p class="panel-cover__description">Hearing questions from colleagues on the work - answering here to share and keep forever.
-    Having some questions by myself, go through doc/debug - sharing here to share.</p>
-            <hr class="panel-cover__divider panel-cover__divider--secondary" />
-    
-            <div class="navigation-wrapper">
-    
-              <nav class="cover-navigation cover-navigation--primary">
-                <ul class="navigation">
-                  <li class="navigation__item"><a href="https://azubkov.github.io/#blog" title="link to Practical Programming Answers blog" class="blog-button">Blog</a></li>
-                </ul>
-              </nav>
-    
-              
-              
-              <nav class="cover-navigation navigation--social">
-                <ul class="navigation">
-              
-                  <!-- Twitter -->
-                  <li class="navigation__item">
-                    <a href="https://www.facebook.com/profile.php?id=100005367938776" title="Facebook account">
-                      <i class='icon icon-social-facebook'></i>
-                      <span class="label">Facebook</span>
-                    </a>
-                  </li>
-              
-              
-              
-                  <!-- Github -->
-                  <li class="navigation__item">
-                    <a href="https://github.com/azubkov" title="Github account">
-                      <i class='icon icon-social-github'></i>
-                      <span class="label">Github</span>
-                    </a>
-                  </li>
-                  </li>
-              
-              
-              
-              
-                  <!-- LinkedIn -->
-                  <li class="navigation__item">
-                    <a href="https://pl.linkedin.com/in/artem-zubkov-342b3b96" title="LinkedIn account">
-                      <i class='icon icon-social-linkedin'></i>
-                      <span class="label">LinkedIn</span>
-                    </a>
-                  </li>
-              
-                  <!-- Email -->
-                  <li class="navigation__item">
-                    <a href="mailto:artem.zubkoff@gmail.com" title="Email artem.zubkoff@gmail.com">
-                      <i class='icon icon-mail'></i>
-                      <span class="label">Email</span>
-                    </a>
-                  </li>
-              
-                </ul>
-              </nav>
-              
-    
-            </div>
-    
-          </div>
-    
-        </div>
-    
-        <div class="panel-cover--overlay"></div>
-      </div>
-    </header>
-
-    <div class="content-wrapper">
-        <div class="content-wrapper__inner">
-            
-
-  <article class="post-container post-container--single">
-
-    <header class="post-header">
-      <div class="post-meta">
-        <time datetime="21 Nov 2015" class="post-meta__date date">21 Nov 2015</time> &#8226; <span class="post-meta__tags tags">on <a href="https://azubkov.github.io/tag/Local-Run">Local Run</a>, <a href="https://azubkov.github.io/tag/Build"> Build</a>, <a href="https://azubkov.github.io/tag/main"> main()</a>, <a href="https://azubkov.github.io/tag/Environment"> Environment</a></span>
-        <span class="post-meta__author author"><img src="https://avatars.githubusercontent.com/u/4600678?v=3" alt="profile image for " class="avatar post-meta__avatar" /> by </span>
-      </div>
-      <h1 class="post-title">Application Startup Time</h1>
-    </header>
-
-    <section class="post tag-Local-Run tag-Build tag-main tag-Environment">
-      <div class="paragraph">
+<body class="post-template tag-Local-Run tag-Build tag-main tag-Environment">
+    <header id="header" class="animated fadeIn">
+    <div class="header-background">
+    <section class="blog-content">
+        <a id="site-url" class="blog-title" href="https://azubkov.github.io">Practical Programming Answers</a>
+        <span class="blog-description">Hearing questions from colleagues on the work - answering here to share and keep forever.
+Having some questions by myself, go through doc/debug - sharing here to share.</span>
+        <nav class="links fadeIn animated">
+            <ul>
+                <!-- <li class="rss"><a title="RSS Feed" href="/rss/"><i class="fa fa-fw fa-rss-square"></i></a></li> -->
+        
+            </ul>
+        </nav>
+    </section>
+    <section class="header-content">
+        <h1 class="post-title animated fadeInUp">Application Startup Time</h1>
+        <span class="post-data"><span class="date animated fadeInUp"><i class="fa fa-clock-o"></i> <time class="timesince date" data-timesince="1448060400" datetime="2015-11-21T00:00" title="21 November 2015">2015-11-21 00:00:00<ago class="ago"></time></span>
+            <span class="tags animated fadeInUp"><i class="fa fa-tags"></i> <a href="https://azubkov.github.io/tag/Local-Run">Local Run</a>, <a href="https://azubkov.github.io/tag/Build"> Build</a>, <a href="https://azubkov.github.io/tag/main"> main()</a>, <a href="https://azubkov.github.io/tag/Environment"> Environment</a></span>
+            <span class="author animated fadeInUp"><i class="fa fa-user"></i> <a href=""></a></span></span>
+    </section>
+    </div>
+</header>
+<main id="main" class="content">
+    <article itemtype="http://schema.org/BlogPosting" class="animated fadeIn content post post tag-Local-Run tag-Build tag-main tag-Environment">
+        <section class="post-content">
+            <div class="paragraph">
 <p>Почему в отрасли так много самозванцев? Потому, что запуск программы не требует никаких ресурсов. Сырья, сложных механизмов, нет необратимых процессов.
 Ты можешь запускать программу 5, 10, 200 раз и ничего не изменится в окружающем мире.</p>
 </div>
@@ -192,21 +103,22 @@
 <cite>The Clean Coder</cite>
 </div>
 </div>
-    </section>
+        </section>
 
-  </article>
+    </article>
 
-
-
-
-            <footer class="footer">
-                <span class="footer__copyright">&copy; 2015. All rights reserved.</span>
-                <span class="footer__copyright"><a href="http://uno.daleanthony.com" title="link to page for Uno Ghost theme">Uno theme</a> by <a href="http://daleanthony.com" title="link to website for Dale-Anthony">Dale-Anthony</a></span>
-                <span class="footer__copyright">Proudly published with <a href="http://hubpress.io" title="link to Hubpress website">Hubpress</a></span>
-            </footer>
-        </div>
-    </div>
-
+</main>
+    <footer class="animated fadeIn" id="footer">
+        <section class="colophon">
+          <section class="copyright">Copyright &copy; <span itemprop="copyrightHolder">Practical Programming Answers</span>. <span rel="license">All Rights Reserved</span>.</section>
+          <section class="poweredby">Published with <a class="icon-ghost" href="http://hubpress.io">HubPress</a></section>
+        </section>
+        <section class="bottom">
+          <section class="attribution">
+            <a href="http://github.com/Reedyn/Saga">Built with <i class="fa fa-heart"></i> and Free and Open-Source Software</a>.
+          </section>
+        </section>
+    </footer>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
       <script type="text/javascript">
         jQuery( document ).ready(function() {
@@ -219,9 +131,7 @@
 
         hljs.initHighlightingOnLoad();      
       </script>
-
-    <script type="text/javascript" src="//azubkov.github.io/themes/uno/assets/js/main.js?v=1.0.0"></script>
+    <script src="//azubkov.github.io/themes/Saga/assets/js/scripts.js?v=1.0.0"></script>
     
-
 </body>
 </html>
