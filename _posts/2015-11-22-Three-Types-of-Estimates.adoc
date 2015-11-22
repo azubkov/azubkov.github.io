@@ -5,6 +5,6 @@
 Теперь к программированию. Я выделяю 3 вида эстимейтов:
 image::https://raw.githubusercontent.com/azubkov/azubkov.github.io/master/images/2015-11-22/graph1.png[]
 image::sunset.jpg[]
-video::KCylB780zSM[youtube]
+video::KCylB70zSM[youtube]
 
-image::images/myLogo.png[Alt text] .
+image::logo.png[Alt text]
