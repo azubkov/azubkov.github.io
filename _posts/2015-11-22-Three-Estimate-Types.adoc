@@ -33,4 +33,8 @@ image::2015-11-22/graph2.png[lox]
 Поэтому говорим *6* и выигрываем... *6* недель! +
 Не благодарите.
 
-Professional developers understand that estimates can, and should, be made based on
+
+[quote, Robert C.Martin, The Clean Coder]
+____
+Professional developers understand that estimates can, and should, be made based on low precision requirments, and recognize that those estimates _are estimates_. To reinforce this, professional developers always include error bars with their estimates so that the business understands the uncertainty.
+____
