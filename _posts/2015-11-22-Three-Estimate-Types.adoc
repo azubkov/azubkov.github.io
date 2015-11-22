@@ -6,3 +6,7 @@
 
 
 image::2015-11-22/graph1.png[lox]
+
+Или проще: +
+
+image::2015-11-22/graph2.png[lox]
