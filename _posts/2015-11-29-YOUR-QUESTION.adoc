@@ -1,4 +1,4 @@
-= [?] YOUR QUESTION [!]
+= ? YOUR QUESTION !
 :hp-tags: Intelligence, Experience, Competence, Knowledge
    
 
