@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>PERT (by Robert C.Martin)</title>
+    <meta name="description" content="" />
+    <link href="//fonts.googleapis.com/css?family=Noto+Sans:300,400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="//azubkov.github.io/themes/Saga/assets/css/style.css?v=1.0.0" rel="stylesheet" type="text/css">
+    <link href="//azubkov.github.io/themes/Saga/assets/css/animate.min.css?v=1.0.0" rel="stylesheet" type="text/css">
+    <link href="//azubkov.github.io/themes/Saga/favicon.ico" rel="shortcut icon">
+    <link rel="canonical" href="https://azubkov.github.io/2015/12/05/PERT-by-Robert-CMartin.html" />
+    
+    <meta property="og:site_name" content="Practical Programming Answers" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="PERT (by Robert C.Martin)" />
+    <meta property="og:description" content="Математические формулы вместо эмпирики при оценивании длительности задачи. Привносит точность и автоматизацию. &amp;lt;&amp;#8230;&amp;#8203;&amp;gt; When you estimate a task, you provide three numbers. This is called trivariate analysis: • O: Optimistic Estimate. This number is wildly optimist..." />
+    <meta property="og:url" content="https://azubkov.github.io/2015/12/05/PERT-by-Robert-CMartin.html" />
+    <meta property="article:published_time" content="2015-12-04T23:00:00.000Z" />
+    <meta property="article:modified_time" content="2015-12-05T11:28:18.215Z" />
+    <meta property="article:tag" content="Estimate" />
+    <meta property="article:tag" content="Uncle Bob" />
+    <meta property="article:tag" content="PERT" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="PERT (by Robert C.Martin)" />
+    <meta name="twitter:description" content="Математические формулы вместо эмпирики при оценивании длительности задачи. Привносит точность и автоматизацию. &amp;lt;&amp;#8230;&amp;#8203;&amp;gt; When you estimate a task, you provide three numbers. This is called trivariate analysis: • O: Optimistic Estimate. This number is wildly optimist..." />
+    <meta name="twitter:url" content="https://azubkov.github.io/2015/12/05/PERT-by-Robert-CMartin.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Practical Programming Answers",
+    "author": {
+        "@type": "Person",
+        "name": null,
+        "image": "https://avatars.githubusercontent.com/u/4600678?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": null
+    },
+    "headline": "PERT (by Robert C.Martin)",
+    "url": "https://azubkov.github.io/2015/12/05/PERT-by-Robert-CMartin.html",
+    "datePublished": "2015-12-04T23:00:00.000Z",
+    "dateModified": "2015-12-05T11:28:18.215Z",
+    "keywords": "Estimate,  Uncle Bob,  PERT",
+    "description": "Математические формулы вместо эмпирики при оценивании длительности задачи. Привносит точность и автоматизацию. &amp;lt;&amp;#8230;&amp;#8203;&amp;gt; When you estimate a task, you provide three numbers. This is called trivariate analysis: • O: Optimistic Estimate. This number is wildly optimist..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Practical Programming Answers" href="https://azubkov.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="post-template tag-Estimate tag-Uncle-Bob tag-PERT">
+    <header id="header" class="animated fadeIn">
+    <div class="header-background">
+    <section class="blog-content">
+        <a id="site-url" class="blog-title" href="https://azubkov.github.io">Practical Programming Answers</a>
+        <span class="blog-description">Hearing questions from colleagues on the work - answering here to share and keep forever.
+Find smg by myself, go through doc/debug - sharing here.</span>
+        <nav class="links fadeIn animated">
+            <ul>
+                <!-- <li class="rss"><a title="RSS Feed" href="/rss/"><i class="fa fa-fw fa-rss-square"></i></a></li> -->
+        
+            </ul>
+        </nav>
+    </section>
+    <section class="header-content">
+        <h1 class="post-title animated fadeInUp">PERT (by Robert C.Martin)</h1>
+        <span class="post-data"><span class="date animated fadeInUp"><i class="fa fa-clock-o"></i> <time class="timesince date" data-timesince="1449270000" datetime="2015-12-05T00:00" title="05 December 2015">2015-12-05 00:00:00<ago class="ago"></time></span>
+            <span class="tags animated fadeInUp"><i class="fa fa-tags"></i> <a href="https://azubkov.github.io/tag/Estimate">Estimate</a>, <a href="https://azubkov.github.io/tag/Uncle-Bob"> Uncle Bob</a>, <a href="https://azubkov.github.io/tag/PERT"> PERT</a></span>
+            <span class="author animated fadeInUp"><i class="fa fa-user"></i> <a href=""></a></span></span>
+    </section>
+    </div>
+</header>
+<main id="main" class="content">
+    <article itemtype="http://schema.org/BlogPosting" class="animated fadeIn content post post tag-Estimate tag-Uncle-Bob tag-PERT">
+        <section class="post-content">
+            <div class="paragraph">
+<p>Математические формулы вместо эмпирики при оценивании длительности задачи. Привносит точность и автоматизацию.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>&lt;&#8230;&#8203;&gt;<br>
+When you estimate a task, you provide three numbers. This is called <em>trivariate analysis</em>:<br>
+• <strong>O:</strong> Optimistic Estimate. This number is <em>wildly</em> optimistic. You could only get the task done this quickly if absolutely everything went right. Indeed, in order for the math to work this number should have much less than a 1% chance of occurrence.2 In Peter’s case, this would be 1 day, as shown in Figure 10-1.<br></p>
+</div>
+<div class="paragraph">
+<p>• <strong>N:</strong> Nominal Estimate. This is the estimate with the greatest chance of success. If you were to draw a bar chart, it would be the highest bar, as shown in Figure 10-1. It is 3 days.<br></p>
+</div>
+<div class="paragraph">
+<p>• <strong>P:</strong> Pessimistic Estimate. Once again this is <em>wildly</em> pessimistic. It should include everything except hurricanes, nuclear war, stray black holes, and other catastrophes. Again, the math only works if this number has much less than a 1% chance of success. In Peter’s case this number is off the chart on the right. So 12 days.<br></p>
+</div>
+<div class="paragraph">
+<p>Given these three estimates, we can describe the probability distribution as follows:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="/images/2015-12-05/file0.jpeg" alt="file0.jpeg">
+</div>
+</div>
+<div class="paragraph">
+<p>μ is the expected duration of the task. In Peter’s case it is (1+12+12)/6, or about 4.2 days. For most tasks this will be a somewhat pessimistic number because the right-hand tail of the distribution is longer than the left-hand tail.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="/images/2015-12-05/file1.jpeg" alt="file1.jpeg">
+</div>
+</div>
+<div class="paragraph">
+<p>σ is the standard deviation of the probability distribution for the task. It is a measure of how uncertain the task is. When this number is large, the uncertainty is large too. For Peter this number is (12 – 1)/6, or about 1.8 days.</p>
+</div>
+<div class="paragraph">
+<p>Given Peter’s estimate of 4.2/1.8, Mike understands that this task will likely be done within five days but might also take 6, or even 9, days to complete.</p>
+</div>
+<div class="paragraph">
+<p>But Mike is not just managing one task. He’s managing a project of many tasks. Peter has three of those tasks that he must work on in sequence. Peter has estimated these tasks as shown in Table 10-1.</p>
+</div>
+<div class="paragraph">
+<p>Table 10-1. Peter’s Tasks<br></p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="/images/2015-12-05/file2.jpeg" alt="file2.jpeg">
+</div>
+</div>
+<div class="paragraph">
+<p>What’s up with that “beta” task? It looks like Peter is pretty confident about it, but that something could possibly go wrong that would derail him significantly. How should Mike interpret that? How long should Mike plan for Peter to complete all three tasks?</p>
+</div>
+<div class="paragraph">
+<p>It turns out that, with a few simple calculations, Mike can combine all of Peter’s tasks and come up with a probability distribution for the entire set of tasks. The math is pretty straightforward:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="/images/2015-12-05/file3.jpeg" alt="file3.jpeg">
+</div>
+</div>
+<div class="paragraph">
+<p>For any sequence of tasks the expected duration of that sequence is the simple sum of all the expected durations of the tasks in that sequence. So if Peter has three tasks to complete, and their estimates are 4.2/1.8, 3.5/2.2, and 6.5/1.3, then Peter will likely be done with all three in about 14 days: 4.2 + 3.5 + 6.5.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="/images/2015-12-05/file4.jpeg" alt="file4.jpeg">
+</div>
+</div>
+<div class="paragraph">
+<p>The standard deviation of the sequence is the square root of the sum of the squares of the standard deviations of the tasks. So the standard deviation for all three of Peter’s tasks is about 3.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>(1.82 + 2.22 + 1.32)1/2 =
+(3.24 + 2.48 + 1.69)1/2 =
+9.771/2 = ~ 3.13</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This tells Mike that Peter’s tasks will likely take 14 days, but could very well take 17 days (1σ) and could possibly even take 20 days (2σ). It could even take longer, but that’s pretty unlikely.<br>
+&lt;&#8230;&#8203;&gt;<br></p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; Robert C.Martin<br>
+<cite>The Clean Coder</cite>
+</div>
+</div>
+        </section>
+
+    
+        <section class="post-comments">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          var disqus_shortname = 'martiazoo'; // required: replace example with your forum shortname
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </section>
+    
+    </article>
+
+</main>
+    <footer class="animated fadeIn" id="footer">
+        <section class="colophon">
+          <section class="copyright">Copyright &copy; <span itemprop="copyrightHolder">Practical Programming Answers</span>. <span rel="license">All Rights Reserved</span>.</section>
+          <section class="poweredby">Published with <a class="icon-ghost" href="http://hubpress.io">HubPress</a></section>
+        </section>
+        <section class="bottom">
+          <section class="attribution">
+            <a href="http://github.com/Reedyn/Saga">Built with <i class="fa fa-heart"></i> and Free and Open-Source Software</a>.
+          </section>
+        </section>
+    </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+    <script src="//azubkov.github.io/themes/Saga/assets/js/scripts.js?v=1.0.0"></script>
+    
+</body>
+</html>
