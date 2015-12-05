@@ -50,4 +50,4 @@ The standard deviation of the sequence is the square root of the sum of the squa
 
 This tells Mike that Peter’s tasks will likely take 14 days, but could very well take 17 days (1σ) and could possibly even take 20 days (2σ). It could even take longer, but that’s pretty unlikely. +
 <...> +
-____
+____ 
