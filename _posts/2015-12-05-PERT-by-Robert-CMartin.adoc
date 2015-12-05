@@ -35,7 +35,7 @@ What’s up with that “beta” task? It looks like Peter is pretty confident a
 It turns out that, with a few simple calculations, Mike can combine all of Peter’s tasks and come up with a probability distribution for the entire set of tasks. The math is pretty straightforward:
 
 
-image::2015-12-05/file4.jpeg[lox]
+image::2015-12-05/file2.jpeg[lox]
 
 For any sequence of tasks the expected duration of that sequence is the simple sum of all the expected durations of the tasks in that sequence. So if Peter has three tasks to complete, and their estimates are 4.2/1.8, 3.5/2.2, and 6.5/1.3, then Peter will likely be done with all three in about 14 days: 4.2 + 3.5 + 6.5.
 
