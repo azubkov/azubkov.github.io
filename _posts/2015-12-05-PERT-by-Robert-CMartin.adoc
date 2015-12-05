@@ -2,10 +2,11 @@
 
 :hp-tags: Estimate, Uncle Bob, PERT
 
-
+Математические формулы вместо эмпирики при оценивании длительности задачи. Привносит точность и автоматизацию.
 
 [quote, Robert C.Martin, The Clean Coder]
 ____
+<...> +
 When you estimate a task, you provide three numbers. This is called _trivariate analysis_: + 
 • *O:* Optimistic Estimate. This number is _wildly_ optimistic. You could only get the task done this quickly if absolutely everything went right. Indeed, in order for the math to work this number should have much less than a 1% chance of occurrence.2 In Peter’s case, this would be 1 day, as shown in Figure 10-1. +
 
@@ -47,6 +48,6 @@ The standard deviation of the sequence is the square root of the sum of the squa
 (3.24 + 2.48 + 1.69)1/2 =
 9.771/2 = ~ 3.13
 
-This tells Mike that Peter’s tasks will likely take 14 days, but could very well take 17 days (1σ) and could possibly even take 20 days (2σ). It could even take longer, but that’s pretty unlikely.
-
+This tells Mike that Peter’s tasks will likely take 14 days, but could very well take 17 days (1σ) and could possibly even take 20 days (2σ). It could even take longer, but that’s pretty unlikely. +
+<...> +
 ____
