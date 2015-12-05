@@ -15,11 +15,11 @@ When you estimate a task, you provide three numbers. This is called _trivariate 
 
 Given these three estimates, we can describe the probability distribution as follows:
 
-image::2015-11-22/graph1.png[lox]
+image::2015-12-05/file0.jpeg[lox]
 μ is the expected duration of the task. In Peter’s case it is (1+12+12)/6, or about 4.2 days. For most tasks this will be a somewhat pessimistic number because the right-hand tail of the distribution is longer than the left-hand tail.3
 
 
-image::2015-11-22/graph1.png[lox]
+image::2015-12-05/file0.jpeg[lox]
 σ is the standard deviation4 of the probability distribution for the task. It is a measure of how uncertain the task is. When this number is large, the uncertainty is large too. For Peter this number is (12 – 1)/6, or about 1.8 days.
 
 Given Peter’s estimate of 4.2/1.8, Mike understands that this task will likely be done within five days but might also take 6, or even 9, days to complete.
@@ -28,18 +28,18 @@ But Mike is not just managing one task. He’s managing a project of many tasks.
 
 Table 10-1. Peter’s Tasks +
 
-image::2015-11-22/graph1.png[lox]
+image::2015-12-05/file0.jpeg[lox]
 
 What’s up with that “beta” task? It looks like Peter is pretty confident about it, but that something could possibly go wrong that would derail him significantly. How should Mike interpret that? How long should Mike plan for Peter to complete all three tasks?
 
 It turns out that, with a few simple calculations, Mike can combine all of Peter’s tasks and come up with a probability distribution for the entire set of tasks. The math is pretty straightforward:
 
 
-image::2015-11-22/graph1.png[lox]
+image::2015-12-05/file0.jpeg[lox]
 
 For any sequence of tasks the expected duration of that sequence is the simple sum of all the expected durations of the tasks in that sequence. So if Peter has three tasks to complete, and their estimates are 4.2/1.8, 3.5/2.2, and 6.5/1.3, then Peter will likely be done with all three in about 14 days: 4.2 + 3.5 + 6.5.
 
-image::2015-11-22/graph1.png[lox]
+image::2015-12-05/file0.jpeg[lox]
 
 The standard deviation of the sequence is the square root of the sum of the squares of the standard deviations of the tasks. So the standard deviation for all three of Peter’s tasks is about 3.
 
