@@ -16,7 +16,7 @@ When you estimate a task, you provide three numbers. This is called _trivariate 
 
 Given these three estimates, we can describe the probability distribution as follows:
 
-image::2015-12-05/file0.jpeg[align="center"]
+image::2015-12-05/file0.jpeg[ width=80, height=30, align="center"]
 μ is the expected duration of the task. In Peter’s case it is (1+12+12)/6, or about 4.2 days. For most tasks this will be a somewhat pessimistic number because the right-hand tail of the distribution is longer than the left-hand tail.
 
 
