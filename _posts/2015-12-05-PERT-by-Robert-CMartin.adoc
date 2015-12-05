@@ -42,7 +42,7 @@ For any sequence of tasks the expected duration of that sequence is the simple s
 image::2015-12-05/file4.jpeg[align="center"]
 
 The standard deviation of the sequence is the square root of the sum of the squares of the standard deviations of the tasks. So the standard deviation for all three of Peter’s tasks is about 3.
-
+[literal]
 (1.82 + 2.22 + 1.32)1/2 =
 (3.24 + 2.48 + 1.69)1/2 =
 9.771/2 = ~ 3.13
