@@ -18,5 +18,5 @@ License forces you to promote author in your software/post, or donate.
 ****
 *Contact blog's author:*
 [[img-sunset]]
-image::2015-27-12/email-128.png[alt="Sunset", width="32", height="32", link="mailto:doc.writer@asciidoctor.org"]
+image::2015-27-12/email-128.png[alt="Sunset", width="32", height="32", link="mailto:artem.zubkoff@gmail.com"]
 ****
