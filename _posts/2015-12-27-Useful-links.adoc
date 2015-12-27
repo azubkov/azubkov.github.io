@@ -15,7 +15,7 @@ License forces you to promote author in your software/post, or donate.
 '''
 
 
-****
+
 [[img-mailto]]
 image::2015-27-12/email-128.png[alt="img-mailto", width="32", height="32", link="mailto:artem.zubkoff@gmail.com",float="left"]
 
