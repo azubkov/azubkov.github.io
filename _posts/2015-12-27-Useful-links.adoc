@@ -12,6 +12,8 @@ License forces you to promote author in your software/post, or donate.
 
 '''
 
+'''
+
 
 ****
 *Contact blog's author:*
