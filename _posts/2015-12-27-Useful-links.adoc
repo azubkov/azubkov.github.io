@@ -11,6 +11,8 @@ image::2015-27-12/email-128.png[alt="Sunset", width="32", height="32", link="mai
 '''
 http://www.flaticon.com/
 
+Very good service to retrive icons by keyword. Find anything you want. +
+License forces you to promote author in your software/post, or donate.
 
 '''
 
