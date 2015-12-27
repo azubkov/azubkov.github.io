@@ -3,10 +3,6 @@
 :hp-tags: useful, links
 
 
-[[img-sunset]]
-image::2015-27-12/email-128.png[alt="Sunset", width="32", height="32", link="mailto:doc.writer@asciidoctor.org"]
-
-
 
 '''
 http://www.flaticon.com/
@@ -16,10 +12,9 @@ License forces you to promote author in your software/post, or donate.
 
 '''
 
-.AsciiDoc history
-****
-AsciiDoc was first released in Nov 2002 by Stuart Rackham.
-It was designed from the start to be a shorthand syntax
-for producing professional documents like DocBook and LaTeX.
-****
 
+****
+*Contact blog's author:*
+[[img-sunset]]
+image::2015-27-12/email-128.png[alt="Sunset", width="32", height="32", link="mailto:doc.writer@asciidoctor.org"]
+****
