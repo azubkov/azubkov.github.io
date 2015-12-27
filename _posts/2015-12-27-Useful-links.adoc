@@ -2,10 +2,9 @@
 
 :hp-tags: useful, links
 
-mailto:doc.writer@asciidoctor.org[dfg]
 
 [[img-sunset]]
-image::2015-11-22/graph2.png[alt="Sunset", width="64", height="64", link="mailto:doc.writer@asciidoctor.org"]
+image::2015-27-12/email-128.png[alt="Sunset", width="32", height="32", link="mailto:doc.writer@asciidoctor.org"]
 
 
 
