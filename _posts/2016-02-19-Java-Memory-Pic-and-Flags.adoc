@@ -1,0 +1,37 @@
+= Java Memory Pic & Flags
+
+:hp-tags: java, xmx, runtime
+
+
+YEEEEEEEAAAAAAAH  +
+Best java memory pic ever.  +
+You'd rather cleaning rooms, but if you do specifying java XX params,  +
+you'll finally know what they mean!
+
+
+image::2015-12-05/file1.jpeg[align="center"]
+
+
+
+Stolen from channel I want promote:
+
+''''
+
+Warsaw JUG  +
+https://www.youtube.com/channel/UC2coGyxf5x_CzJ3l4F-N-Sw
+  +
+  +  
+Jinkubator #40 - JVM Internals - Jakub Kubryński   +
+https://youtu.be/rWdgla54bcc
+
+''''
+
+
+
+
+// contacts section
+[[img-mailto]]
+image::2015-27-12/email-128.png[alt="img-mailto", width="32", height="32", link="mailto:artem.zubkoff@gmail.com",float="left", margin=20]
+[[img-sunset2]]
+image::2015-27-12/email-128.png[alt="Sunset", width="32", height="32", link="mailto:artem.zubkoff@gmail.com",float="left", margin=20]
+// eof contacts section
