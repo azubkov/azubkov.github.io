@@ -9,11 +9,11 @@ You'd rather cleaning rooms, but if you do specifying *XX* params,  +
 you'll finally know what they mean!
 
 
-image::2015-12-05/file1.jpeg[align="center"]
+image::2016-02-19/java_mm.png[align="center"]
 
 
-
-Stolen from channel I want promote:
+___
+Stolen from channels I want promote:
 
 ''''
 
